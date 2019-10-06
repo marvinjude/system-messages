@@ -1,0 +1,101 @@
+@import url(./normalize.css);
+
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  font-display: swap;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+:root {
+  --warning-text: #f94f55;
+  --success-text: #f94f55;
+  --error-text: #30cc71;
+  --warning: linear-gradient(41.71deg, #fd916a -4.75%, #fd6266 110.32%);
+  --success: linear-gradient(35.19deg, #6eecce -56.12%, #30cc71 91.35%);
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --error: linear-gradient(
+    39.15deg,
+    #f5515f -22.47%,
+    #f44f60 -20.3%,
+    #d00269 91.36%
+  );
+}
+
+.message {
+  padding: 3rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 300px;
+  box-shadow: var(--shadow);
+}
+.message__heading {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+}
+.message__button {
+  border-radius: 999999px;
+  padding: 1.5rem 3rem;
+  font-size: 2rem;
+  border: none;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+.message__button--warning {
+  color: var(--warning-text);
+}
+.message__button--error {
+  color: var(--error-text);
+}
+.message__button--success {
+  color: var(--success-text);
+}
+
+.message__body {
+  font-size: 2rem;
+  text-align: center;
+  color: rgb(244, 244, 245);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.message--warning {
+  background: var(--warning);
+}
+
+.message--error {
+  background: var(--error);
+}
+
+.message--success {
+  background: var(--success);
+}
